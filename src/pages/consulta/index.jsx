@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.scss'
-
+import Cabecalho from '../../components';
 import axios from 'axios'
 
 
@@ -34,11 +34,12 @@ export default function Consultar() {
     
     return (
     <div className='conteiner'>
+        <Cabecalho/>
         
-        <div className='pagina-consultar'>
-            <h1> Consultar tabela Canal </h1>
+        <div className='sub-conteiner'>
 
-            <button onClick={buscar}>Buscar</button>
+        <div className='tabela-canal'>
+            <h1> Consultar tabela Canal </h1>
 
             <table>
                 <thead>
@@ -61,13 +62,11 @@ export default function Consultar() {
                 </tbody>
 
             </table>           
+             <button onClick={buscar}>Buscar</button>
         </div>
-        
-        <div className='pagina-consultar'>
+
+        <div className='tabela-canal-programa'>
             <h1> Consultar tabela Canal Programa </h1>
-
-            <button onClick={buscarCP}>Buscar</button>
-
             <table>
                 <thead>
                     <tr>
@@ -81,7 +80,6 @@ export default function Consultar() {
                         <th>Canal Aberto</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     {canalPrograma.map(item => 
                          <tr>
@@ -93,17 +91,17 @@ export default function Consultar() {
                          <td>{item.nm_canal}</td>
                          <td>{item.nr_canal}</td>
                          <td>{item.bt_aberto ? 'Sim' : 'Não'}</td>
-
                      </tr> )}
                 </tbody>
-
             </table>           
+            <button onClick={buscarCP}>Buscar</button>
         </div>
-        
-        <div className='pagina-consultar'>
-            <h1> Consultar tabela Usuario </h1>
+    </div>
 
-            <button onClick={buscarUsuario}>Buscar</button>
+
+    <div className='sub-contei'>
+        <div className='tabela-usuario'>
+            <h1> Consultar tabela Usuario </h1>
 
             <table>
                 <thead>
@@ -122,13 +120,11 @@ export default function Consultar() {
                 </tbody>
 
             </table>           
+            <button onClick={buscarUsuario}>Buscar</button>
         </div>
         
-        <div className='pagina-consultar'>
+        <div className='tabela-programa'>
             <h1>Consultar tabela Programa Favorito</h1>
-
-            <button onClick={buscarCanalF}>Buscar</button>
-
             <table>
                 <thead>
                     <tr>
@@ -166,8 +162,11 @@ export default function Consultar() {
                 </tbody>
 
             </table>           
+             <button onClick={buscarCanalF}>Buscar</button>
         </div>
     </div>
+        
+ </div>
     )
 
 }

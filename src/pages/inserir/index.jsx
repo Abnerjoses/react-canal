@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './index.scss'
+import Cabecalho from '../../components';
 
 import axios from 'axios'
 
