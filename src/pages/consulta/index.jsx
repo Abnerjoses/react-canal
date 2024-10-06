@@ -118,7 +118,6 @@ export default function Consultar() {
                          <td>{item.nm_usuario}</td>
                      </tr> )}
                 </tbody>
-
             </table>           
             <button onClick={buscarUsuario}>Buscar</button>
         </div>

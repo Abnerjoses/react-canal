@@ -77,6 +77,8 @@ export default function Inserir() {
     return (
 
     <div className='Conteiner'>
+        <Cabecalho/>
+        
 
         <div className='pagina-cadastrar'>
 

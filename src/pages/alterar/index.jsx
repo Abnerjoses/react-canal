@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.scss'
-
+import Cabecalho from '../../components';
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
 
@@ -101,6 +101,7 @@ export default function Alterar() {
     return (
 
     <div className='Conteiner'>
+        <Cabecalho/>
 
         <div className='pagina-cadastrar'>
 
